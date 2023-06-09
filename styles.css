@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Noto+Sans+Mono:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500;600;700;800;900&family=Rubik+Puddles&display=swap');
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.update-modal {
+    background: linear-gradient(#ff9626a2, #f2597acf);
+    width: clamp(250px, 60%, 600px);
+    margin: 3rem auto;
+    padding: 1.7rem 2rem;
+    border-radius: 40px 10px;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.515), -3px -4px 7px 0px rgba(0, 0, 0, 0.178);
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    display: none;
+
+}
+
+.update-modal input {
+    padding: 1rem 2rem;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(#ff96269a, #f2597ab1);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    width: clamp(200px, 50%, 500px);
+    text-align: left;
+    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.515), -3px -4px 7px 0px rgba(0, 0, 0, 0.178);
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.update-modal button {
+    border: none;
+    font-size: 1rem;
+    margin: 2rem 0 0 0;
+    padding: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #ffffff;
+    background: linear-gradient(#ff00e645, #f2597afc, #fff2005e);
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.515);
+}
+
+.update-modal button:hover {
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.515), -3px -4px 7px 0px rgba(0, 0, 0, 0.178);
+
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.todo h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-family: Rubik Puddles, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    background: linear-gradient(#ff9626, #f2597a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.todo form {
+    width: clamp(250px, 50%, 50rem);
+    margin: 3rem auto;
+    display: flex;
+
+}
+
+.input form input {
+    flex: 0.9;
+    padding: 0.5rem 2rem;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(#ff96269a, #f2597ab1);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+
+.input button {
+    flex: 0.1;
+    border: none;
+    color: #fcfcfc;
+    font-size: 2rem;
+    background: linear-gradient(#ff9626e9, #f2597a);
+    padding: 0.95rem;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    cursor: pointer;
+
+}
+
+input:focus {
+    outline: none;
+    background: linear-gradient(#ff9626a2, #f2597acf);
+}
+
+input::placeholder {
+    transition: opacity 0.2s linear;
+    color: white;
+}
+
+input:focus::placeholder {
+    opacity: 0;
+}
+
+.all-items {
+
+    padding: 1rem 1.5rem;
+    width: clamp(250px, 40%, 600px);
+    margin: 4rem auto;
+    background: linear-gradient(#ff9626a2, #f2597acf);
+    border-radius: 40px 10px;
+    color: white;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.515), -3px -4px 7px 0px rgba(0, 0, 0, 0.178);
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+
+}
+
+.all-items .item {
+    list-style: none;
+    display: flex;
+   
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.all-items .item li{
+    max-width: 350px;
+    word-break: break-all;
+}
+
+
+.item .item-buttons {
+    display: flex;
+    
+    margin-left: 1rem;
+}
+
+.item .item-buttons img {
+    cursor: pointer;
+    height: 24px;
+    width: 25px;
+    margin: 0.4rem;
+
+
+}
+
+@media screen and (max-width:750px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .input form input {
+        font-size: 1rem;
+
+    }
+    .all-items .item li{
+       font-size: 1rem;
+      max-width: 144px;
+       word-break: break-all; 
+    }
+
+    .item .item-buttons button {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+}

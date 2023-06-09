@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="update-modal ">
+        <input class="update-input" type="text" name="item" placeholder="Update item" autocomplete="off">
+        <button class="update-item">Update</button>
+    </div>
+
+
+    <div class="todo">
+        <h1>Todo List</h1>
+        <div class="input">
+            <form action="">
+                <input class="todo-input" type="text" name="item" placeholder="Add Items" autocomplete="off">
+                <button class="submit-button">+</button>
+            </form>
+        </div>
+
+
+        <div class="all-items">
+            <div class="item">
+                <li> Click on add items to add items </li>
+                <div class="item-buttons">
+                    <img class="delete" src="./images/trash-solid.png" alt="delete">
+                    <img class="update" src="./images/pen.png" alt="update">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
