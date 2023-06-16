@@ -30,43 +30,53 @@ function addItem(e) {
      }
 }
 
+function deleteAndUpdate(e) {
+    if (e.target.classList.contains("delete")) {
+        e.target.parentElement.parentElement.remove();
+        saveTolocalStorage();
+       
 
-function deleteAndUpdate(e){
- if(e.target.classList.contains("delete")){
-    e.target.parentElement.parentElement.remove();
-    saveTolocalStorage();
- }
- else if(e.target.classList.contains("update")){
-
-    document.querySelector(".todo").style.display = "none"
-    document.querySelector(".update-modal").classList.add("active");
-   updateInput.value =e.target.parentElement.parentElement.firstElementChild.innerHTML;
-
-   updateItemButton.addEventListener("click",()=>{
-    if(updateInput.value){
-        e.target.parentElement.parentElement.firstElementChild.innerHTML = updateInput.value;
-        saveTolocalStorage()
-        document.querySelector(".todo").style.display = "block"
-     document.querySelector(".update-modal").classList.remove("active");
-    }else{
-        alert("Input field can't be empty")
+    } else if (e.target.classList.contains("update")) {
+        document.querySelector(".todo").style.display = "none";
+        document.querySelector(".update-modal").classList.add("active");
+        updateInput.value = e.target.parentElement.parentElement.firstElementChild.textContent;
+        updateItemButton.addEventListener("click", () => {
+            if (updateInput.value) {
+                e.target.parentElement.parentElement.firstElementChild.textContent = updateInput.value;
+                saveTolocalStorage(); 
+                window.location.reload()
+                document.querySelector(".todo").style.display = "block";
+                document.querySelector(".update-modal").classList.remove("active");
+            } else {
+                alert("Input field can't be empty");
+            }
+        });
     }
-
-   })
-
- }
 }
+
 
 
 function saveTolocalStorage(){
-    localStorage.setItem("data",allItems.innerHTML);
-    
+  
+
+        localStorage.setItem("data",allItems.innerHTML);
+
 }
 function showItems(){
-    if(localStorage.length > 0){
 
-        allItems.innerHTML = localStorage.getItem("data");
-    }
+  if(localStorage.length > 0 ){
+
+      allItems.innerHTML = localStorage.getItem("data");
+
+      
+  }
+    
+  
+    
+   
+
+   
+  
 }
 
 showItems();
